@@ -1,9 +1,10 @@
 {
-    "name": "laravel/laravel",
+    "name": "selfinvoking/laravel",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "The Laravel Framework combined with Roadrunner.",
     "keywords": [
         "framework",
+        "roadrunner",
         "laravel"
     ],
     "license": "MIT",
