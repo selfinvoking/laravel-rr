@@ -78,16 +78,21 @@ class RoadRunnerCommand extends Command
      */
     public function handle()
     {
-        $process = new Process([
+        $command = [
             $this->roadRunnerBinary(),
             $this->roadRunnerCommand(),
             $this->inferDebugOption(),
             $this->inferConfigOption(),
-        ]);
+        ];
 
+        $process = new Process($command);
         $process->setTimeout(PHP_INT_MAX);
+        $process->start();
 
-        $process->run(function ($type, $buffer) {
+        $this->info('Server started using command:');
+        $this->comment(implode(' ', $command));
+
+        $process->wait(function ($type, $buffer) {
             $this->line(trim($buffer, "\n"));
         });
     }
