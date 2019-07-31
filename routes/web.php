@@ -12,5 +12,6 @@
 */
 
 Route::get('/', function () {
+	dump('This text appears in your console, not your response!');
     return view('welcome');
 });
