@@ -5,6 +5,11 @@ A very simple repo which combines Laravel with the power of Roadrunner
 - [More About Laravel](https://laravel.com/)
 - [More About Roadrunner](https://roadrunner.dev/)
 
+## Get Started
+
+    composer create-project selfinvoking/laravel-rr project
+    php artisan rr
+
 ## Why?
 
 I needed to create several projects using Laravel and wanted to host them with Roadrunner for increased performance.
